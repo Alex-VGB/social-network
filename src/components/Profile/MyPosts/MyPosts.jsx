@@ -10,7 +10,7 @@ class MyPosts extends React.Component {
         let postElements =
             [...this.props.posts]
                 .reverse()
-                .map(p => <Post message={p.message} likeCount={p.likesCount}/>);
+                .map(p => <Post key={p.id} message={p.message} likeCount={p.likesCount}/>);
 
         let newPostElement = React.createRef();
 
@@ -20,10 +20,12 @@ class MyPosts extends React.Component {
 
 
         return (
-            <div className={s.postBlock}>
-                <h3>My posts</h3>
-                <AddNewPostFormRedux onSubmit={onAddPost}/>
-                <div className={s.posts}>
+            <div>
+                <div className={s.postBlock}>
+                    <h3>My posts</h3>
+                    <AddNewPostFormRedux onSubmit={onAddPost}/>
+                </div>
+                <div className={`${s.postBlock} ${s.posts}`}>
                     {postElements}
                 </div>
             </div>
@@ -37,10 +39,10 @@ const maxLength10 = maxLengthCreator(10);
 const AddNewPostForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <div>
+            <div className={s.postText}>
                 <Field name="newPostText"
                        component={Textarea}
-                       placeholder={"Send Post"}
+                       placeholder={"What's new?"}
                        validate={[required, maxLength10]}/>
             </div>
             <div>

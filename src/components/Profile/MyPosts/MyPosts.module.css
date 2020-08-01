@@ -3,8 +3,13 @@
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 1px 0 0 #d3d9de, 0 0 0 1px #e7e8ec;
-    margin: 15px 0 0;
+    margin: 15px 15px 0 0;
 }
 .posts{
     margin-top: 10px;
+}
+.postText div div textarea{
+    border: none;
+    border-bottom: solid 1px #ccc;
+    width:100%;
 }

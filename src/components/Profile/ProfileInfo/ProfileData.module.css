@@ -1,0 +1,56 @@
+.name {
+    font-size:20px;
+}
+.status {
+    cursor: pointer;
+}
+.status div div span,
+.status div div input{
+    min-width: 200px;
+    display: block;
+    font-size: 14px;
+    padding: 5px 0 5px 0;
+}
+.status div div span:hover,
+.status div div input:hover{
+    background-color: rgb(211, 217, 222);
+}
+.line {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+    background: #ccc;
+}
+.sectionAbout {
+    display: flex;
+}
+.sectionAbout span {
+    width: 100%;
+}
+.btnEdit {
+    position: absolute;
+    right: 30px;
+}
+.btnEdit button {
+    background: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.contact:nth-child(8),
+.contact:nth-child(3),
+.contact:nth-child(4){
+    display: none;
+}
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+.contact b,
+.contact span {
+    width:100%;
+}
+.aboutRight {
+    color: #4a76a8;
+}
